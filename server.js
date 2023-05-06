@@ -11,11 +11,11 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT;
 
 
-
+//Import your routes here
 const testRoute = require("./routes/TestRoute");
 
 
-
+//Set to your routes to express app
 app.use("/test",testRoute);
 
 
