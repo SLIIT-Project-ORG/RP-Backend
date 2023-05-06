@@ -10,6 +10,15 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT;
 
+
+
+const testRoute = require("./routes/TestRoute");
+
+
+
+app.use("/test",testRoute);
+
+
 app.listen(PORT,()=>{
     console.log(`Application listen to ${PORT} port`);
 })
