@@ -3,9 +3,7 @@ const User = require("../model/User");
 const bcrypt = require("bcrypt");
 
 router.route("/signup").post(async (req, res) => {
-
     const userReq = req.body;
-
     const hashPassword = await bcrypt.hash(userReq.password, 10,)
     userReq.password = hashPassword;
 
