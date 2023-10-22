@@ -34,19 +34,10 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    address: {
-        type: String,
-        required: true,
-        trim: true
-    },
     createdAt:{
         type:Date,
         default:Date.now()
     },
-    description:{
-        type:String,
-        required:true
-    }
 })
 
 userSchema.methods.generateAuthToken = function() {
