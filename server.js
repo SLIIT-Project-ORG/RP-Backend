@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT;
 
 //Import your routes here
-const testRoute = require("./routes/TestRoute");
+const doctorRoute = require("./routes/DoctorRoute");
 const userRoute = require("./routes/UserRoute");
 
 //Set to your routes to express app
-app.use("/test",testRoute);
 app.use("/user",userRoute);
+app.use("/doctor",doctorRoute);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
